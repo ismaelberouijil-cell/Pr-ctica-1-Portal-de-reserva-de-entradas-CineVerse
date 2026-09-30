@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', () => {
+  const outBom = document.getElementById('out-bom');
 
 
 
@@ -9,12 +10,13 @@ const estadoConexion = navigator.onLine ? 'Conectado' : 'Desconectado';
 const params = new URLSearchParams(window.location.search);
 const usuario = params.get('usuario') || 'Invitado';
 const rol = params.get('rol') || 'Usuario_Normal';
+
 outBom.innerHTML = 
 `<p><strong>Idioma:</strong> ${idioma}</p>
 <p><strong>Estado de Conexión:</strong> ${estadoConexion}</p>
 <p><strong>Usuario:</strong> ${usuario}</p>
 <p><strong>Rol:</strong> ${rol}</p>`;
-
+});
 
 // 3 limpieza de correo electrónico
 let Entrada = document.getElementById("correoSocio");
@@ -28,6 +30,15 @@ const dominio = partes[1];
 const codigoPedido = String(idPedido).padStart(6, '0');
 
 
+switch (EspectadorVIP) {
+    case "":
+        console.log("Basico");
+        break;
+    case (null || undefined):
+        console.log("Basico");
+        break;
+    default:
+        console.log("El usuario no es un espectador VIP.");
+        break;
+}
 
-
-});
