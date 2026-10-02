@@ -1,34 +1,58 @@
-h1{
-    color:rgb(255, 174, 0)
-}
-body{
+body {
     background-color: rgb(204, 39, 39);
     color: white;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
+    margin: 0;
 }
-.card{
+
+header, main {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    color: rgb(255, 174, 0);
+}
+
+.card {
     background-color: #c09393;
     border-radius: 10px;
     padding: 20px;
-    margin: 20px;
+    margin: 20px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-#out-bom{
-    color: white;
 
+input, textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin: 5px;
+    width: 90%;
 }
-button{
+
+button {
     background-color: rgb(255, 174, 0);
     color: black;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 10px;
 }
-#Correos{
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    margin-right: 10px;
-    color: black;
+
+button:hover {
+    opacity: 0.85;
+}
+
+article {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+#contador {
+    font-weight: bold;
 }

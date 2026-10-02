@@ -1,39 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CineVerse</title>
-    <link rel ="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="metrics.js" defer></script>
+    <script src="app.js" defer></script>
 </head>
 <body>
-    <script src="app.js"></script>
-<h1>Bienvenido a CineVerse</h1>
+    <header>
+        <h1>Bienvenido a CineVerse</h1>
+        <p>En CineVerse, te ofrecemos una experiencia cinematográfica única. Explora nuestra selección de películas y disfruta de la magia del cine.</p>
+    </header>
 
-<p>En CineVerse, te ofrecemos una experiencia cinematográfica única. Explora nuestra amplia selección de películas, desde clásicos atemporales hasta los últimos estrenos. Disfruta de críticas, trailers y recomendaciones personalizadas para que nunca te pierdas una gran película.</p>
-<h2>¡Únete a nuestra comunidad de cinéfilos y vive la magia del cine como nunca antes!</h2>
-<p>HOla</p>
+    <main>
+        <section class="card">
+            <h2>Información de la sesión</h2>
+            <div id="out-bom">Cargando información...</div>
+        </section>
 
-<section class="card">
-       <div id="out-bom">Cargando información...</div>
-</section>
+        <section class="card">
+            <h2>Preferencias del socio</h2>
+            <div id="out-preferencias">Cargando información...</div>
+        </section>
 
-<div class="Contenedor"></div>
-<input type="text" id="Correos" placeholder="Escribe aquí tu correo electrónico">
-<br>
-<br>
-<button onclick="guardarCorreo()">Guardar Correo</button>
-</div>
+        <section class="card">
+            <h2>Datos del socio</h2>
+            <input type="text" id="correo" placeholder="Correo electrónico">
+            <input type="number" id="codigo-socio" placeholder="Código de socio">
+            <button id="guardar-correo">Guardar datos</button>
+            <div id="out-correo"></div>
+        </section>
 
+        <section class="card">
+            <h2>Taquilla</h2>
+            <p>Entrada General: 8.50€</p>
+            <p>Combo Pareja: 12.00€</p>
+            <p>Código promocional: 3€</p>
+            <div id="cartel">Cargando importes...</div>
+        </section>
 
-<h2>Precios </h2>
-<section class="card">
-    <p>Entrada General: 8.50€</p>
-    <p>Entrada VIP: 20€</p>
-    <p>Entrada Pareja: 12€</p>
-    <p>Entrada Senior: 5€</p>
-</section>
+        <section class="card">
+            <h2>Venta Anticipada</h2>
+            <p id="contador">Pulsa el botón para activar el descuento flash.</p>
+            <button id="activar-descuento">Activar Descuento Flash</button>
+        </section>
 
-
+        <section class="card" id="resenas">
+            <h2>Reseñas de películas</h2>
+            <textarea id="opinion" rows="4" placeholder="Escribe tu opinión..."></textarea>
+            <button id="publicar-resena">Publicar comentario</button>
+            <div id="cards"></div>
+        </section>
+    </main>
 </body>
 </html>
